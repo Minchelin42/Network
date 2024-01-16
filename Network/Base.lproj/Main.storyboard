@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q6F-tJ-KBh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pfr-Ct-4en">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -112,6 +113,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRH-PX-6xT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1267.9389312977098" y="-20.422535211267608"/>
+        </scene>
+        <!--Beer View Controller-->
+        <scene sceneID="KI2-p6-MZp">
+            <objects>
+                <viewController id="Pfr-Ct-4en" customClass="BeerViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ou-Vv-9xy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-Lw-raS">
+                                <rect key="frame" x="0.0" y="119" width="393" height="609"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aXs-JZ-9hL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeerCollectionViewCell" id="4zs-I6-Hfn" customClass="BeerCollectionViewCell" customModule="Network" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fUW-SX-Knn">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-qD-kiG">
+                                <rect key="frame" x="20" y="738" width="353" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Edu-tK-qUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recommandButtonTapped:" destination="Pfr-Ct-4en" eventType="touchUpInside" id="zfT-tU-i8J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8g-FO-pro">
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ayS-jC-Ya6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uze-o8-AI3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uze-o8-AI3" firstAttribute="bottom" secondItem="Qea-qD-kiG" secondAttribute="bottom" constant="20" id="3t0-hg-qhy"/>
+                            <constraint firstItem="uRl-Lw-raS" firstAttribute="leading" secondItem="uze-o8-AI3" secondAttribute="leading" id="42H-mP-CbT"/>
+                            <constraint firstItem="uRl-Lw-raS" firstAttribute="top" secondItem="u8g-FO-pro" secondAttribute="bottom" id="4eE-kG-GGL"/>
+                            <constraint firstItem="u8g-FO-pro" firstAttribute="trailing" secondItem="uze-o8-AI3" secondAttribute="trailing" id="4tb-u9-Nbu"/>
+                            <constraint firstItem="Qea-qD-kiG" firstAttribute="leading" secondItem="uze-o8-AI3" secondAttribute="leading" constant="20" id="7uF-bb-A6a"/>
+                            <constraint firstItem="u8g-FO-pro" firstAttribute="leading" secondItem="uze-o8-AI3" secondAttribute="leading" id="D03-1o-dcQ"/>
+                            <constraint firstItem="uRl-Lw-raS" firstAttribute="trailing" secondItem="uze-o8-AI3" secondAttribute="trailing" id="Hpb-XV-IhG"/>
+                            <constraint firstItem="Qea-qD-kiG" firstAttribute="top" secondItem="uRl-Lw-raS" secondAttribute="bottom" constant="10" id="TmP-68-pJo"/>
+                            <constraint firstItem="uze-o8-AI3" firstAttribute="trailing" secondItem="Qea-qD-kiG" secondAttribute="trailing" constant="20" id="V6n-Oi-Q3y"/>
+                            <constraint firstItem="u8g-FO-pro" firstAttribute="top" secondItem="uze-o8-AI3" secondAttribute="top" id="myp-rq-9Ad"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerCollectionView" destination="uRl-Lw-raS" id="s3H-0r-qy6"/>
+                        <outlet property="recommandButton" destination="Qea-qD-kiG" id="aEA-d1-His"/>
+                        <outlet property="titleLabel" destination="u8g-FO-pro" id="Ptc-JG-Way"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7E-TQ-ysN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048.0916030534349" y="-5.6338028169014089"/>
         </scene>
     </scenes>
     <resources>

@@ -25,6 +25,8 @@ class LottoViewController: UIViewController {
     
     var lottoPickerView = UIPickerView()
     
+    let manager = LottoAPIManager()
+    
     let numberList: [Int] = Array(1...1025).reversed()
     
     override func viewDidLoad() {
@@ -42,29 +44,6 @@ class LottoViewController: UIViewController {
         }
 
     }
-    
-    func loadData(round: Int) {
-        
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(round)"
-        
-        AF.request(url).responseDecodable(of: Lotto.self) { response in
-            switch response.result {
-            case .success(let success):
-                self.lottoNumber[0].text = "\(success.drwtNo1)"
-                self.lottoNumber[1].text = "\(success.drwtNo2)"
-                self.lottoNumber[2].text = "\(success.drwtNo3)"
-                self.lottoNumber[3].text = "\(success.drwtNo4)"
-                self.lottoNumber[4].text = "\(success.drwtNo5)"
-                self.lottoNumber[5].text = "\(success.drwtNo6)"
-                self.lottoNumber[6].text = "+ \(success.bnusNo)"
-                
-            case .failure(let failure):
-                print("오류 발생")
-            }
-            
-        }
-    }
-    
 }
 
 
@@ -82,7 +61,16 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         selectRoundTextField.font = .systemFont(ofSize: 17, weight: .semibold)
         selectRoundTextField.textAlignment = .center
         
-        loadData(round: numberList[row])
+        manager.loadData(round: numberList[row]) { value in
+            self.lottoNumber[0].text = "\(value.drwtNo1)"
+            self.lottoNumber[1].text = "\(value.drwtNo2)"
+            self.lottoNumber[2].text = "\(value.drwtNo3)"
+            self.lottoNumber[3].text = "\(value.drwtNo4)"
+            self.lottoNumber[4].text = "\(value.drwtNo5)"
+            self.lottoNumber[5].text = "\(value.drwtNo6)"
+            self.lottoNumber[6].text = "+ \(value.bnusNo)"
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

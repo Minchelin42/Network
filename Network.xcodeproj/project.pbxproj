@@ -15,6 +15,12 @@
 		395E8D0F2B56643600AA69F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395E8D0D2B56643600AA69F9 /* LaunchScreen.storyboard */; };
 		395E8D172B56655700AA69F9 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D162B56655700AA69F9 /* LottoViewController.swift */; };
 		395E8D1A2B566A7100AA69F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 395E8D192B566A7100AA69F9 /* Alamofire */; };
+		395E8D1D2B566E9D00AA69F9 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D1B2B566E9D00AA69F9 /* BeerCollectionViewCell.swift */; };
+		395E8D1E2B566E9D00AA69F9 /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 395E8D1C2B566E9D00AA69F9 /* BeerCollectionViewCell.xib */; };
+		395E8D202B56710700AA69F9 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D1F2B56710700AA69F9 /* BeerViewController.swift */; };
+		395E8D232B56718500AA69F9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 395E8D222B56718500AA69F9 /* Kingfisher */; };
+		395E8D252B5687D700AA69F9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D242B5687D700AA69F9 /* Protocol.swift */; };
+		395E8D272B56887700AA69F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D262B56887700AA69F9 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,11 @@
 		395E8D0E2B56643600AA69F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		395E8D102B56643600AA69F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		395E8D162B56655700AA69F9 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		395E8D1B2B566E9D00AA69F9 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		395E8D1C2B566E9D00AA69F9 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		395E8D1F2B56710700AA69F9 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		395E8D242B5687D700AA69F9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		395E8D262B56887700AA69F9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395E8D232B56718500AA69F9 /* Kingfisher in Frameworks */,
 				395E8D1A2B566A7100AA69F9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +56,8 @@
 		395E8CF62B56643400AA69F9 = {
 			isa = PBXGroup;
 			children = (
+				395E8D262B56887700AA69F9 /* APIManager.swift */,
+				395E8D242B5687D700AA69F9 /* Protocol.swift */,
 				395E8D012B56643400AA69F9 /* Network */,
 				395E8D002B56643400AA69F9 /* Products */,
 			);
@@ -68,6 +82,9 @@
 				395E8D0D2B56643600AA69F9 /* LaunchScreen.storyboard */,
 				395E8D102B56643600AA69F9 /* Info.plist */,
 				395E8D162B56655700AA69F9 /* LottoViewController.swift */,
+				395E8D1B2B566E9D00AA69F9 /* BeerCollectionViewCell.swift */,
+				395E8D1C2B566E9D00AA69F9 /* BeerCollectionViewCell.xib */,
+				395E8D1F2B56710700AA69F9 /* BeerViewController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -90,6 +107,7 @@
 			name = Network;
 			packageProductDependencies = (
 				395E8D192B566A7100AA69F9 /* Alamofire */,
+				395E8D222B56718500AA69F9 /* Kingfisher */,
 			);
 			productName = Network;
 			productReference = 395E8CFF2B56643400AA69F9 /* Network.app */;
@@ -121,6 +139,7 @@
 			mainGroup = 395E8CF62B56643400AA69F9;
 			packageReferences = (
 				395E8D182B566A7100AA69F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				395E8D212B56718500AA69F9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 395E8D002B56643400AA69F9 /* Products */;
 			projectDirPath = "";
@@ -136,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395E8D1E2B566E9D00AA69F9 /* BeerCollectionViewCell.xib in Resources */,
 				395E8D0F2B56643600AA69F9 /* LaunchScreen.storyboard in Resources */,
 				395E8D0C2B56643600AA69F9 /* Assets.xcassets in Resources */,
 				395E8D0A2B56643400AA69F9 /* Main.storyboard in Resources */,
@@ -149,8 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395E8D272B56887700AA69F9 /* APIManager.swift in Sources */,
 				395E8D072B56643400AA69F9 /* ViewController.swift in Sources */,
 				395E8D172B56655700AA69F9 /* LottoViewController.swift in Sources */,
+				395E8D202B56710700AA69F9 /* BeerViewController.swift in Sources */,
+				395E8D252B5687D700AA69F9 /* Protocol.swift in Sources */,
+				395E8D1D2B566E9D00AA69F9 /* BeerCollectionViewCell.swift in Sources */,
 				395E8D032B56643400AA69F9 /* AppDelegate.swift in Sources */,
 				395E8D052B56643400AA69F9 /* SceneDelegate.swift in Sources */,
 			);
@@ -383,6 +407,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		395E8D212B56718500AA69F9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -390,6 +422,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 395E8D182B566A7100AA69F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		395E8D222B56718500AA69F9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 395E8D212B56718500AA69F9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
