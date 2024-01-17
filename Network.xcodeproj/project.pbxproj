@@ -23,6 +23,12 @@
 		395E8D272B56887700AA69F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D262B56887700AA69F9 /* APIManager.swift */; };
 		395E8D302B57998700AA69F9 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D2F2B57998700AA69F9 /* BookViewController.swift */; };
 		395E8D322B5799AB00AA69F9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 395E8D312B5799AB00AA69F9 /* .gitignore */; };
+		395E8D342B5799E800AA69F9 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D332B5799E800AA69F9 /* APIKey.swift */; };
+		395E8D372B579A7800AA69F9 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8D352B579A7800AA69F9 /* BookCollectionViewCell.swift */; };
+		395E8D382B579A7800AA69F9 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 395E8D362B579A7800AA69F9 /* BookCollectionViewCell.xib */; };
+		3995652D2B580A6E00DE765F /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995652B2B580A6E00DE765F /* LanguageTableViewCell.swift */; };
+		3995652E2B580A6E00DE765F /* LanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3995652C2B580A6E00DE765F /* LanguageTableViewCell.xib */; };
+		399565302B580AA000DE765F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995652F2B580AA000DE765F /* LanguageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		395E8D262B56887700AA69F9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		395E8D2F2B57998700AA69F9 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		395E8D312B5799AB00AA69F9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		395E8D332B5799E800AA69F9 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		395E8D352B579A7800AA69F9 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		395E8D362B579A7800AA69F9 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		3995652B2B580A6E00DE765F /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		3995652C2B580A6E00DE765F /* LanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableViewCell.xib; sourceTree = "<group>"; };
+		3995652F2B580AA000DE765F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				395E8D312B5799AB00AA69F9 /* .gitignore */,
+				395E8D332B5799E800AA69F9 /* APIKey.swift */,
 				395E8D262B56887700AA69F9 /* APIManager.swift */,
 				395E8D242B5687D700AA69F9 /* Protocol.swift */,
 				395E8D012B56643400AA69F9 /* Network */,
@@ -79,9 +92,10 @@
 		395E8D012B56643400AA69F9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				399565392B5813B000DE765F /* Papago */,
+				399565382B58139E00DE765F /* Book */,
 				395E8D022B56643400AA69F9 /* AppDelegate.swift */,
 				395E8D042B56643400AA69F9 /* SceneDelegate.swift */,
-				395E8D062B56643400AA69F9 /* ViewController.swift */,
 				395E8D082B56643400AA69F9 /* Main.storyboard */,
 				395E8D0B2B56643600AA69F9 /* Assets.xcassets */,
 				395E8D0D2B56643600AA69F9 /* LaunchScreen.storyboard */,
@@ -90,9 +104,29 @@
 				395E8D1B2B566E9D00AA69F9 /* BeerCollectionViewCell.swift */,
 				395E8D1C2B566E9D00AA69F9 /* BeerCollectionViewCell.xib */,
 				395E8D1F2B56710700AA69F9 /* BeerViewController.swift */,
-				395E8D2F2B57998700AA69F9 /* BookViewController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		399565382B58139E00DE765F /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				395E8D2F2B57998700AA69F9 /* BookViewController.swift */,
+				395E8D352B579A7800AA69F9 /* BookCollectionViewCell.swift */,
+				395E8D362B579A7800AA69F9 /* BookCollectionViewCell.xib */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		399565392B5813B000DE765F /* Papago */ = {
+			isa = PBXGroup;
+			children = (
+				395E8D062B56643400AA69F9 /* ViewController.swift */,
+				3995652B2B580A6E00DE765F /* LanguageTableViewCell.swift */,
+				3995652C2B580A6E00DE765F /* LanguageTableViewCell.xib */,
+				3995652F2B580AA000DE765F /* LanguageViewController.swift */,
+			);
+			path = Papago;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3995652E2B580A6E00DE765F /* LanguageTableViewCell.xib in Resources */,
 				395E8D322B5799AB00AA69F9 /* .gitignore in Resources */,
+				395E8D382B579A7800AA69F9 /* BookCollectionViewCell.xib in Resources */,
 				395E8D1E2B566E9D00AA69F9 /* BeerCollectionViewCell.xib in Resources */,
 				395E8D0F2B56643600AA69F9 /* LaunchScreen.storyboard in Resources */,
 				395E8D0C2B56643600AA69F9 /* Assets.xcassets in Resources */,
@@ -179,10 +215,14 @@
 				395E8D272B56887700AA69F9 /* APIManager.swift in Sources */,
 				395E8D072B56643400AA69F9 /* ViewController.swift in Sources */,
 				395E8D172B56655700AA69F9 /* LottoViewController.swift in Sources */,
+				395E8D372B579A7800AA69F9 /* BookCollectionViewCell.swift in Sources */,
 				395E8D202B56710700AA69F9 /* BeerViewController.swift in Sources */,
+				395E8D342B5799E800AA69F9 /* APIKey.swift in Sources */,
 				395E8D252B5687D700AA69F9 /* Protocol.swift in Sources */,
 				395E8D1D2B566E9D00AA69F9 /* BeerCollectionViewCell.swift in Sources */,
 				395E8D302B57998700AA69F9 /* BookViewController.swift in Sources */,
+				3995652D2B580A6E00DE765F /* LanguageTableViewCell.swift in Sources */,
+				399565302B580AA000DE765F /* LanguageViewController.swift in Sources */,
 				395E8D032B56643400AA69F9 /* AppDelegate.swift in Sources */,
 				395E8D052B56643400AA69F9 /* SceneDelegate.swift in Sources */,
 			);

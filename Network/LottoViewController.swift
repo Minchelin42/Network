@@ -44,6 +44,12 @@ class LottoViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
 }
 
 
