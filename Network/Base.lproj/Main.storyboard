@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,12 +19,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="x7P-OF-Sko"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
         </scene>
-        <!--Lotto View Controller-->
+        <!--Item-->
         <scene sceneID="HqR-9d-CQP">
             <objects>
                 <viewController id="q6F-tJ-KBh" customClass="LottoViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,6 +100,7 @@
                             <constraint firstItem="iSg-8b-kr0" firstAttribute="top" secondItem="8E3-sw-tLb" secondAttribute="top" constant="100" id="lzn-qe-cJd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="q3o-q1-3e9"/>
                     <connections>
                         <outlet property="selectRoundTextField" destination="iSg-8b-kr0" id="FZX-cC-JLd"/>
                         <outletCollection property="lottoNumber" destination="cqy-Oh-DF6" collectionClass="NSMutableArray" id="DYq-HT-Oro"/>
@@ -112,9 +114,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRH-PX-6xT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.9389312977098" y="-20.422535211267608"/>
+            <point key="canvasLocation" x="1063" y="665"/>
         </scene>
-        <!--Beer View Controller-->
+        <!--Item-->
         <scene sceneID="KI2-p6-MZp">
             <objects>
                 <viewController id="Pfr-Ct-4en" customClass="BeerViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-Lw-raS">
-                                <rect key="frame" x="0.0" y="119" width="393" height="609"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="560"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aXs-JZ-9hL">
                                     <size key="itemSize" width="128" height="128"/>
@@ -143,7 +145,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-qD-kiG">
-                                <rect key="frame" x="20" y="738" width="353" height="60"/>
+                                <rect key="frame" x="20" y="689" width="353" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Edu-tK-qUg"/>
                                 </constraints>
@@ -179,6 +181,7 @@
                             <constraint firstItem="u8g-FO-pro" firstAttribute="top" secondItem="uze-o8-AI3" secondAttribute="top" id="myp-rq-9Ad"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cpW-K6-1Hp"/>
                     <connections>
                         <outlet property="beerCollectionView" destination="uRl-Lw-raS" id="s3H-0r-qy6"/>
                         <outlet property="recommandButton" destination="Qea-qD-kiG" id="aEA-d1-His"/>
@@ -187,7 +190,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7E-TQ-ysN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048.0916030534349" y="-5.6338028169014089"/>
+            <point key="canvasLocation" x="1063" y="-652"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lK8-1U-Wxx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JwJ-OS-hNw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8lN-hE-7dv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9px-Z8-fgD"/>
+                        <segue destination="q6F-tJ-KBh" kind="relationship" relationship="viewControllers" id="SmZ-1Z-PkF"/>
+                        <segue destination="Pfr-Ct-4en" kind="relationship" relationship="viewControllers" id="K90-HG-wQ6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0W-78-LD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
